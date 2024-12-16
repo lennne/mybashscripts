@@ -1,8 +1,8 @@
 #!/bin/bash
 results=""
-for i in "$@";
+for i in "$@"; #for loop that goes through all the arguments being passed
 do
-  value=$(find . -iname "$i")  
-  results="$results $value"
+  value=$(find . -iname "$i")   #find the location of the files specified without case sensitivity
+  results="$results $value" #append the location of each file side by side for further operations
 done
 echo "$results"
