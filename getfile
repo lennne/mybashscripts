@@ -1,0 +1,8 @@
+#!/bin/bash
+results=""
+for i in "$@";
+do
+  value=$(find . -iname "$i")  
+  results="$results $value"
+done
+echo "$results"
