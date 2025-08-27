@@ -8,11 +8,12 @@
 #   1. in the parent folder execute the command using the path
 
 
-#to run the loop we need to know how long 
+#to run the loop we need to know how many times 
 #we're running the loop for
-read -p "Enter your name: " name
-name=$((name * 2))
-for i in $(seq 1 $name); do
-name=$((name-1))
-echo $name
-done
+name=$(ls ../ | wc -l) #using command substitution
+echo "number of files are $name"
+# name=$((name * 2))
+# for i in $(seq 1 $name); do
+# name=$((name-1))
+# echo $name
+# done
